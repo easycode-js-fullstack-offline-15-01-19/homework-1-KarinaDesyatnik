@@ -6,15 +6,16 @@ let string = 'some test string';
 let answer;
 answer = string[0] + string[string.length - 1];
 // 2. Сделать первую и последнюю буквы в верхнем регистре
-answer = (string[0].toUpperCase() + string.slice(1, string.length - 1) + string[string.length - 1].toUpperCase()); 
+answer = (string[0].toUpperCase() + string.slice(1) + string[string.length - 1].toUpperCase()); 
 // 3. Найти положение слова ‘string’ в строке 
 answer = string.indexOf('string');
 // 4. Найти положение второго пробела           
-answer = string.indexOf(' ', 2);
+let firstSpaceIndex = string.indexOf(' ');
+let value = string.indexOf(' ', firstSpaceIndex);
 // 5. Получить строку с 5-го символа длиной 4 буквы
-answer = string.substr(5, 4);
+answer = string.substr(4, 4);
 // 6. Получить строку с 5-го по 9-й символы 
-answer = string.slice(5, 9);
+answer = string.slice(4, 9);
 //7. Получить новую строку из исходной путем удаления последних 6-и символов (то есть исходная строка без последних 6и символов)
 answer = string.substring(0, string.length - 6);
 // 8. Из двух переменных a=20 и b=16 получить переменную string, в которой будет
@@ -36,7 +37,7 @@ answer = Math.random().toFixed(2);
 //4. Проверить результат вычисления 0.6 + 0.7 - как привести к нормальному виду (1.3)?
 let num1 = 0.6;
 let num2 = 0.7;
-answer = (num1 *10 + num2*10) / 10; // 1.3
+answer = (num1 * 10 + num2 * 10) / 10; // 1.3
 //5. Получить число из строки ‘100$’ 
 answer = parseInt('100$'); // 100
 //Задачи.Объекты
